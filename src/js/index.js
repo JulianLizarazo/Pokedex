@@ -5,7 +5,7 @@ var pito = ""
 
 
 comprobacion();
-
+/*
 function perra(){
   ingreso = document.getElementById("ingreso").value
   console.log(ingreso)
@@ -46,14 +46,14 @@ async function init(pito) {
   window.imagen.setAttribute('src', porfavorfunciona.sprites.front_default)
  
 }
-
+*/
 
 function comprobacion(){
   var foto = document.getElementById("body");
   var tiempo = new Date();
-  console.log(parseInt(tiempo.getHours))
-  if(tiempo.getHours < 18){
-    foto.setAttribute("style", 'background-image: url("/Pokedex/assets/imgDay.jpg")')
+  console.log(tiempo.getHours())
+  if(tiempo.getHours() < 18){
+    foto.setAttribute("style", 'background-image: url("/Pokedex/assets/imgDay.jpg"); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;')
   }else{
     foto.setAttribute("style", "background-image: url('/Pokedex/assets/imgNight.jpg'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;")
   }
