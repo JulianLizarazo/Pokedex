@@ -5,7 +5,7 @@ var pito = ""
 
 
 comprobacion();
-/*
+
 function perra(){
   ingreso = document.getElementById("ingreso").value
   console.log(ingreso)
@@ -28,11 +28,11 @@ async function init(pito) {
   const porfavorfunciona = await prueba(pito);
   console.log(porfavorfunciona);
   const prueba45 = JSON.stringify(porfavorfunciona)
-  var text = document.getElementById("texto");
+  
   var types = document.getElementById("tipos");
   //tipos
   for(let i = 0; i<porfavorfunciona.types.length; i++){
-    text.innerText +=  porfavorfunciona.types[i].type.name + "/ " 
+    types.innerText +=  porfavorfunciona.types[i].type.name + "/ " 
   }
 
   //Stats
@@ -46,7 +46,7 @@ async function init(pito) {
   window.imagen.setAttribute('src', porfavorfunciona.sprites.front_default)
  
 }
-*/
+
 
 function comprobacion(){
   var foto = document.getElementById("body");
