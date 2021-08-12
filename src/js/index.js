@@ -1,39 +1,49 @@
-const url = 'https://pokeapi.co/api/v2/pokemon/pikachu/';
+const pikachu = 'https://pokeapi.co/api/v2/pokemon/grookey/'
+let url = 'https://pokeapi.co/api/v2/pokemon/';
+var ingreso = ""
+var pito = ""
 
-const busqueda = fetch(url);
 
 
 
-/*const conversion = busqueda.then(data => {
-  return data.json();
-}).then(responseJSON => {
-  console.log()
-})
-.catch(error => {
-  console.log(error);
-})*/
+function perra(){
+  ingreso = document.getElementById("ingreso").value
+  console.log(ingreso)
+  pito = `${url}${ingreso}/`
+  console.log(pito)
+  init(pito);
+}
 
-async function prueba() {
-  const hola = await fetch(url)
+
+
+async function prueba(link) {
+  const hola = await fetch(link)
   const prueba = hola.json();
   return prueba;
 }
 
 
 
-async function init() {
-  const porfavorfunciona = await prueba();
+async function init(pito) {
+  const porfavorfunciona = await prueba(pito);
   console.log(porfavorfunciona);
-  var text = document.getElementById("texto");
-
-  text.innerText = porfavorfunciona.types[0].type.name
-  window.imagen.setAttribute('src', porfavorfunciona.sprites.front_default)
   
+  window.imagen.setAttribute('src', porfavorfunciona.sprites.front_default)
+  console.log(hola)
 }
 
 
 
-init();
+
+
+
+const busqueda = fetch(url);
+
+
+
+
+
+
 
 
 

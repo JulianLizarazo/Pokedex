@@ -1,24 +1,26 @@
 "use strict";
 
-var url = 'https://pokeapi.co/api/v2/pokemon/pikachu/';
-var busqueda = fetch(url);
-/*const conversion = busqueda.then(data => {
-  return data.json();
-}).then(responseJSON => {
-  console.log()
-})
-.catch(error => {
-  console.log(error);
-})*/
+var pikachu = 'https://pokeapi.co/api/v2/pokemon/grookey/';
+var url = 'https://pokeapi.co/api/v2/pokemon/';
+var ingreso = "";
+var pito = "";
 
-function prueba() {
+function perra() {
+  ingreso = document.getElementById("ingreso").value;
+  console.log(ingreso);
+  pito = "".concat(url).concat(ingreso, "/");
+  console.log(pito);
+  init(pito);
+}
+
+function prueba(link) {
   var hola, prueba;
   return regeneratorRuntime.async(function prueba$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return regeneratorRuntime.awrap(fetch(url));
+          return regeneratorRuntime.awrap(fetch(link));
 
         case 2:
           hola = _context.sent;
@@ -33,23 +35,22 @@ function prueba() {
   });
 }
 
-function init() {
-  var porfavorfunciona, text;
+function init(pito) {
+  var porfavorfunciona;
   return regeneratorRuntime.async(function init$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
           _context2.next = 2;
-          return regeneratorRuntime.awrap(prueba());
+          return regeneratorRuntime.awrap(prueba(pito));
 
         case 2:
           porfavorfunciona = _context2.sent;
           console.log(porfavorfunciona);
-          text = document.getElementById("texto");
-          text.innerText = porfavorfunciona.types[0].type.name;
           window.imagen.setAttribute('src', porfavorfunciona.sprites.front_default);
+          console.log(hola);
 
-        case 7:
+        case 6:
         case "end":
           return _context2.stop();
       }
@@ -57,4 +58,4 @@ function init() {
   });
 }
 
-init();
+var busqueda = fetch(url);
