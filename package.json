@@ -4,7 +4,8 @@
   "description": "practicing async/await in a pokedex (using pokeAPI)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "node src/js/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/JulianLizarazo/Pokedex/issues"
   },
-  "homepage": "https://github.com/JulianLizarazo/Pokedex#readme",
-  "dependencies": {
-    "pokeapi-js-wrapper": "^1.2.0"
-  }
+  "homepage": "https://github.com/JulianLizarazo/Pokedex#readme"
 }
