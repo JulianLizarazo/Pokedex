@@ -1,0 +1,22 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "practicing async/await in a pokedex (using pokeAPI)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulianLizarazo/Pokedex.git"
+  },
+  "author": "Julian Camilo Pinilla Lizarazo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulianLizarazo/Pokedex/issues"
+  },
+  "homepage": "https://github.com/JulianLizarazo/Pokedex#readme",
+  "dependencies": {
+    "pokeapi-js-wrapper": "^1.2.0"
+  }
+}
