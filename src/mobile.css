@@ -4,9 +4,14 @@
     padding: 0;
 }
 
+:root{
+    --pokemon-light-blue: #2A75BB;
+    --pokemon-yellow: #FFCB05;
+}
+
 body{
     display: grid;
-    grid-template-rows: 20% 70% 10%;
+    grid-template-rows: 20% 878px 10%;
     height: 100vh;
 }
 
@@ -20,4 +25,44 @@ body{
     width: 197px;
     height: 60px;
 
+}
+
+.main{
+    display: grid;
+    grid-template-rows: 60px 434px 384px;
+}
+
+.main__input{
+    grid-row: 1;
+    
+}
+
+.main__input--container{
+    width: 310px;
+    height: 50px;
+    background-color: var(--pokemon-light-blue);
+    border-radius: 20px;
+    border: 2px solid var(--pokemon-yellow);
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.main__input--container input{
+    width: 290px;
+    height: 46px;
+    border: none;
+    border-start-start-radius: 20px;
+    border-end-start-radius: 20px;
+    outline: none;
+    background-color: transparent;
+    margin-inline-start: 10px;
+}
+
+.pokedex{
+    grid-row: 2;
+}
+
+.pokemonInfo{
+    grid-row: 3;
 }
