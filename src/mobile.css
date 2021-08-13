@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 20% 70% 10%;
+    height: 100vh;
+}
+
+.header{
+    grid-row: 1;
+    text-align: center;
+    align-self: center;
+}
+
+.header__img{
+    width: 197px;
+    height: 60px;
+
+}

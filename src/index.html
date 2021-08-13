@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./mobile.css" />
     <title>Pokédex</title>
-</head>
-<body id="body">
-    
-    <img id="image" src="" alt="">
+  </head>
+  <body id="body">
+    <!--<img id="image" src="" alt="">
     <p id="tipos"></p>
     <span><br></span>
     <p id="habilidad"></p>
@@ -22,14 +22,63 @@
     <label for="">
         <input id="ingreso" type="text" placeholder="ingresa algo perra">
         <button type="button" onclick="searchPokemon()" id="button">enviar</button>
-    </label> 
-    
+    </label> -->
 
-    
-    <script src="./js/index.js"></script>   
+    <header class="header">
+      <img
+        src="../assets/pokedexTitle.png"
+        alt="Pokedex page title"
+        class="header__img"
+      />
+    </header>
+
+    <main class="main">
+      <section class="main__input">
+        <div class="main__input--container">
+          <input
+            id="insertNameOrId"
+            type="text"
+            placeholder="Ingresa un nombre o un ID"
+          />
+          <span class="search-icon"></span>
+        </div>
+      </section>
+
+      <section class="pokedex">
+
+            <div class="pokedex__container">
+                <div class="pokedex__container--blackscreen">
+                    <div class="pokedex__container--grayscreen"></div>
+                </div>
+
+                <div class="verticalrectangle"></div>
+                <div class="horizontalrectangle"></div>
+
+                <div class="buttonA"></div>
+                <div class="buttonB"></div>
+
+                <div class="pokemonLogo"></div>
+
+                <div class="buttonStart"></div>
+                <div class="buttonSelect"></div>
+
+            </div>
+      </section>
+
+      <section class="pokemonInfo">
+          <div class="rectangleTop"></div>
+          <div class="info"></div>
+          <div class="rectangleBottom"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <p>derechos blablabla</p>
+        <a href=""><img src="" alt="github logo"></a>
+    </footer>
+
+    <script src="./js/index.js"></script>
     <script src="./js/modules/PokeAPI.js"></script>
     <script src="./js/modules/Pokemon.js"></script>
-    
-    
-</body>
+  </body>
 </html>

@@ -2,7 +2,7 @@
 function searchPokemon() {
   clearInfoPokemon();
 
-  const nameOrIdIngresed = document.getElementById("ingreso").value;
+  const nameOrIdIngresed = document.getElementById("insertNameOrId").value;
   const nameOrIdIngresedInLowerCase = nameOrIdIngresed.toLowerCase();
   const pokemon = new Pokemon(nameOrIdIngresedInLowerCase);
 
