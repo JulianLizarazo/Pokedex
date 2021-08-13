@@ -1,10 +1,14 @@
 
 function searchPokemon() {
+  clearInfoPokemon();
+
   const nameOrIdIngresed = document.getElementById("ingreso").value;
-  const pokemon = new Pokemon(nameOrIdIngresed);
+  const nameOrIdIngresedInLowerCase = nameOrIdIngresed.toLowerCase();
+  const pokemon = new Pokemon(nameOrIdIngresedInLowerCase);
 
   pokemon.showPokemonId();
   pokemon.showPokemonName();
+  pokemon.showPokemonGeneration();
   pokemon.showPokemonAbilities();
   pokemon.showPokemonSprite();
   pokemon.showPokemonTypes();
@@ -21,6 +25,15 @@ function verifyHour(){
   }else{
     body.setAttribute("style", 'background-image: url("/Pokedex/assets/imgNight.jpg");' + stylesInCommon)
   }
+}
+
+function clearInfoPokemon(){
+  const clearTypes = document.getElementById("tipos")
+  clearTypes.innerHTML= '';
+  const clearAbilities = document.getElementById("habilidad")
+  clearAbilities.innerHTML= '';
+  const clearStats = document.getElementById("stats")
+  clearStats.innerHTML= '';
 }
 
 verifyHour();
