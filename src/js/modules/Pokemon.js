@@ -1,9 +1,9 @@
-import PokeAPI from "./PokeAPI.mjs";
+//import PokeAPI from "./PokeAPI.js";
 
 class Pokemon {
   #pokemon;
 
-  constructor(pokemonNameOrId = "torterra") {
+  constructor(pokemonNameOrId) {
     this.#pokemon = new PokeAPI(pokemonNameOrId);
   }
 
@@ -53,6 +53,16 @@ class Pokemon {
   }
 }
 
+/*
+function perra() {
+  const ingreso = document.getElementById("ingreso").value;
+  const hola = new Pokemon(ingreso);
 
-export default Pokemon;
-  
+  hola.showPokemonId();
+  hola.showPokemonName();
+  hola.showPokemonAbilities();
+  hola.showPokemonSprite();
+  hola.showPokemonTypes();
+  hola.showPokemonStats();
+}
+  */

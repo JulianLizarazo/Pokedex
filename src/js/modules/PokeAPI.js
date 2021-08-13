@@ -1,4 +1,4 @@
-export class PokeAPI {
+class PokeAPI {
   #url;
    
 
@@ -60,17 +60,7 @@ export class PokeAPI {
   }
 }
 
-export default PokeAPI;
-/*
-function perra() {
-  ingreso = document.getElementById("ingreso").value;
-  const hola = new PokeAPI(ingreso);
 
-  hola.getPokemonId();
-  hola.getPokemonName();
-  hola.getPokemonAbilities();
-  hola.getPokemonSprite();
-  hola.getPokemonTypes();
-  hola.getPokemonStats();
-}
-*/
+
+
+
