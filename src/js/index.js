@@ -1,4 +1,6 @@
-const pikachu = 'https://pokeapi.co/api/v2/pokemon/grookey/'
+
+import Pokemon from "./modules/Pokemon.mjs";
+/*const pikachu = 'https://pokeapi.co/api/v2/pokemon/grookey/'
 let url = 'https://pokeapi.co/api/v2/pokemon/';
 var ingreso = ""
 var pito = ""
@@ -62,6 +64,21 @@ function comprobacion(){
 
 
 const busqueda = fetch(url);
+
+*/
+
+function perra(){
+const ingreso = "swampert"
+const prueba = new Pokemon(ingreso);
+
+prueba.showPokemonName();
+prueba.showPokemonId();
+prueba.showPokemonSprite();
+prueba.showPokemonTypes();
+prueba.showPokemonAbilities();
+prueba.showPokemonStats();
+}
+
 
 
 
