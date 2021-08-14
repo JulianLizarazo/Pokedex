@@ -59,7 +59,12 @@ body{
     outline: none;
     background-color: transparent;
     margin-inline-start: 14px;
+    -webkit-text-fill-color: white;
     
+}
+
+.main__input--container input::placeholder{
+    color: white;
 }
 
 .search-icon{
