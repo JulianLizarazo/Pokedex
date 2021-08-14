@@ -80,7 +80,11 @@ class Pokemon {
     let abilities = document.getElementById("habilidad");
     abilitiesText.innerText = "Abilities: "
     pokemonAbilities.abilities.forEach((pokemonAbility) => {
-      abilities.innerText += pokemonAbility.ability.name + "/";
+      abilities.innerText += pokemonAbility.ability.name;
+      if(pokemonAbility.ability.indexOf() !== (pokemonAbilities.abilities.length + 1)){
+         abilities.innerText += "/ ";
+      }
+        
     });
   }
 
