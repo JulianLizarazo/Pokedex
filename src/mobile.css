@@ -7,11 +7,12 @@
 :root{
     --pokemon-light-blue: #2A75BB;
     --pokemon-yellow: #FFCB05;
+    --pokemon-dark-yellow: #E7A61D;
 }
 
 body{
     display: grid;
-    grid-template-rows: 20% 878px 10%;
+    grid-template-rows: 20% 1028px 10%;
     height: 100vh;
 }
 
@@ -29,7 +30,7 @@ body{
 
 .main{
     display: grid;
-    grid-template-rows: 60px 484px 384px;
+    grid-template-rows: 60px 484px 484px;
 }
 
 .main__input{
@@ -75,7 +76,7 @@ body{
 }
 
 .pokedex__container{
-    background-color: #E7A61D;
+    background-color: var(--pokemon-dark-yellow);
     width: 295px;
     height: 427px;
     border-radius: 5px;
@@ -181,4 +182,46 @@ body{
 
 .pokemonInfo{
     grid-row: 3;
+    position: relative;
 }
+
+.rectangleTop, .rectangleBottom{
+    background-color: var(--pokemon-dark-yellow);
+    width: 295px;
+    height: 43px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    
+}
+
+.rectangleTop p{
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.info{
+    background-color: #C4C4C4;
+    opacity: 80%;
+    width: 295px;
+    height: 387px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 36px;
+    z-index: -1;
+}
+
+.rectangleBottom{
+    top: 0;
+    bottom: -390px;
+}
+
+
