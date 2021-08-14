@@ -8,7 +8,8 @@
     <title>Pokédex</title>
   </head>
   <body id="body">
-    <!--<img id="image" src="" alt="">
+    <!--
+    <img id="image" src="" alt="">
     <p id="tipos"></p>
     <span><br></span>
     <p id="habilidad"></p>
@@ -18,11 +19,8 @@
     <p id="pokemonGeneration"></p>
     <p id="stats"></p>
     
-    
-    <label for="">
-        <input id="ingreso" type="text" placeholder="ingresa algo perra">
-        <button type="button" onclick="searchPokemon()" id="button">enviar</button>
-    </label> -->
+   
+    -->
 
     <header class="header">
       <img
@@ -40,7 +38,9 @@
             type="text"
             placeholder="Ingresa un nombre o un ID"
           />
-          <span class="search-icon"></span>
+          
+          <img src="../assets/search-icon.svg" alt="Search pokemon information" class="search-icon"
+           onclick="searchPokemon()">
         </div>
       </section>
 
@@ -54,13 +54,17 @@
                 <div class="verticalrectangle"></div>
                 <div class="horizontalrectangle"></div>
 
-                <div class="buttonA"></div>
-                <div class="buttonB"></div>
+                <div class="buttonA">
+                  <img src="../assets/a.svg" alt="button a">
+                </div>
+                <div class="buttonB">
+                  <img src="../assets/b.svg" alt="button b">
+                </div>
 
                 <div class="pokemonLogo"></div>
 
                 <div class="buttonStart"></div>
-                <div class="buttonSelect"></div>
+                <div class="buttonStart buttonSelect"></div>
 
             </div>
       </section>

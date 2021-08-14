@@ -14,6 +14,14 @@ function searchPokemon() {
   pokemon.showPokemonStats();
 }
 
+function searchByEnterKeyWord() {
+  var enter = event.keyCode;
+
+  if (enter == 13) {
+    searchPokemon();
+  }
+}
+
 function verifyHour() {
   var stylesInCommon = 'background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;';
   var body = document.getElementById("body");
@@ -36,3 +44,4 @@ function clearInfoPokemon() {
 }
 
 verifyHour();
+window.onkeydown = searchByEnterKeyWord;
