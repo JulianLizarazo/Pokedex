@@ -14,7 +14,7 @@
 
 body{
     display: grid;
-    grid-template-rows: 20% 1028px 10%;
+    grid-template-rows: 20% 1200px 10%;
     height: 100vh;
 }
 
@@ -32,7 +32,7 @@ body{
 
 .main{
     display: grid;
-    grid-template-rows: 60px 484px 484px;
+    grid-template-rows: 60px 484px 706px;
 }
 
 .main__input{
@@ -220,7 +220,7 @@ body{
     background-color: #C4C4C4;
     opacity: 80%;
     width: 295px;
-    height: 387px;
+    height: 557px;
     position: absolute;
     right: 0;
     left: 0;
@@ -229,26 +229,38 @@ body{
     z-index: -1;
     padding-block-start: 25px;
     padding-inline-start: 10px;
-    line-height: 28px;
+    padding-inline-end: 10px;
+    line-height: 40px;
     font-family: var(--font-family-2);
     font-size: 20px;
     
 }
 
+#statsTitle{
+    text-align: center;
+}
+
+.pokeData{
+    display: flex;
+    justify-content: space-between;
+}
+
 .rectangleBottom{
     top: 0;
-    bottom: -390px;
+    bottom: -500px;
 }
 
 .footer{
     grid-row: 3;
     font-family: var(--font-family);
+    
 }
 
 .footer div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 
 }
 

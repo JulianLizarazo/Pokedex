@@ -35,10 +35,16 @@ function verifyHour() {
 }
 
 function clearInfoPokemon() {
+  var clearTypesText = document.getElementById("tiposText");
+  clearTypesText.innerHTML = '';
   var clearTypes = document.getElementById("tipos");
   clearTypes.innerHTML = '';
+  var clearAbilitiesText = document.getElementById("habilidadText");
+  clearAbilitiesText.innerHTML = '';
   var clearAbilities = document.getElementById("habilidad");
   clearAbilities.innerHTML = '';
+  var clearStatsText = document.getElementById("statsText");
+  clearStatsText.innerHTML = '';
   var clearStats = document.getElementById("stats");
   clearStats.innerHTML = '';
 }
