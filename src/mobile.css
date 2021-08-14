@@ -8,6 +8,8 @@
     --pokemon-light-blue: #2A75BB;
     --pokemon-yellow: #FFCB05;
     --pokemon-dark-yellow: #E7A61D;
+    --font-family: 'Palette Mosaic', cursive;
+    --font-family-2: 'Shadows Into Light', cursive;
 }
 
 body{
@@ -207,6 +209,9 @@ body{
     height: inherit;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-family-2);
+    font-weight: bold;
+    font-size: 28px;
     
 
 }
@@ -222,6 +227,12 @@ body{
     margin: auto;
     top: 36px;
     z-index: -1;
+    padding-block-start: 25px;
+    padding-inline-start: 10px;
+    line-height: 28px;
+    font-family: var(--font-family-2);
+    font-size: 20px;
+    
 }
 
 .rectangleBottom{
@@ -231,7 +242,7 @@ body{
 
 .footer{
     grid-row: 3;
-
+    font-family: var(--font-family);
 }
 
 .footer div{
@@ -272,6 +283,17 @@ body{
 .github img{
     width: 50px;
     height: 50px;
+}
+
+.pokemon-sprite{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 120px;
+    height: 120px;
 }
 
 

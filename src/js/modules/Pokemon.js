@@ -10,13 +10,13 @@ class Pokemon {
   async showPokemonName() {
     const pokemonName = await this.#pokemon.getPokemonInfo();
     const showPokemonName = document.getElementById("pokemonName");
-    showPokemonName.innerHTML = pokemonName.name;
+    showPokemonName.innerHTML = "Name:" + pokemonName.name;
   }
 
   async showPokemonId() {
     const pokemonId = await this.#pokemon.getPokemonInfo();
     const showPokemonId = document.getElementById("pokemonId");
-    showPokemonId.innerHTML = pokemonId.id;
+    showPokemonId.innerHTML = "Pokedex Position:" +  pokemonId.id;
   }
 
   async showPokemonGeneration() {
@@ -26,7 +26,7 @@ class Pokemon {
 
     const pokemonGeneration = this.#getPokemonGeneration(pokemonId);
 
-    showPokemonGeneration.innerHTML = pokemonGeneration;
+    showPokemonGeneration.innerHTML = "Generation: " + pokemonGeneration;
   }
 
   #getPokemonGeneration(pokemonId) {
@@ -61,16 +61,16 @@ class Pokemon {
   async showPokemonTypes() {
     const pokemonTypes = await this.#pokemon.getPokemonInfo();
     let types = document.getElementById("tipos");
-
+    types.innerText = "Types: "
     pokemonTypes.types.forEach(
-      (pokemonType) => (types.innerText += pokemonType.type.name + "\n")
+      (pokemonType) => (types.innerText += pokemonType.type.name + "/")
     );
   }
 
   async showPokemonAbilities() {
     const pokemonAbilities = await this.#pokemon.getPokemonInfo();
     let abilities = document.getElementById("habilidad");
-
+    abilities.innerText = "Abilities: "
     pokemonAbilities.abilities.forEach((pokemonAbility) => {
       abilities.innerText += pokemonAbility.ability.name + "/";
     });
@@ -79,7 +79,7 @@ class Pokemon {
   async showPokemonStats() {
     const pokemonStats = await this.#pokemon.getPokemonInfo();
     let pokemonText = document.getElementById("stats");
-
+    pokemonText.innerText = "Stats \n";
     pokemonStats.stats.forEach((pokemonStat) => {
       pokemonText.innerText +=
         pokemonStat.stat.name + ": " + pokemonStat.base_stat + "\n";
