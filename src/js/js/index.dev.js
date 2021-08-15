@@ -37,7 +37,7 @@ function verifyHour() {
 function clearInfoPokemon() {
   var clearTypesText = document.getElementById("tiposText");
   clearTypesText.innerHTML = '';
-  var clearTypes = document.getElementById("tipos");
+  var clearTypes = document.getElementById("typesBox");
   clearTypes.innerHTML = '';
   var clearAbilitiesText = document.getElementById("habilidadText");
   clearAbilitiesText.innerHTML = '';

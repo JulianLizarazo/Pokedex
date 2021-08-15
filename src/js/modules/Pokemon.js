@@ -70,7 +70,9 @@ class Pokemon {
     let types = document.getElementById("tipos");
     typesText.innerText = "Types: "
     pokemonTypes.types.forEach(
-      (pokemonType) => (types.innerText += pokemonType.type.name + "/")
+      (pokemonType) => {
+        document.body.onload = comprobatePokemonTypes(pokemonType.type.name);
+      }//(types.innerText += pokemonType.type.name + "/")
     );
   }
 

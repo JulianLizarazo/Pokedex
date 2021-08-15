@@ -13,6 +13,7 @@ function searchPokemon() {
   pokemon.showPokemonSprite();
   pokemon.showPokemonTypes();
   pokemon.showPokemonStats();
+  
 }
 
 function searchByEnterKeyWord(){
@@ -39,7 +40,7 @@ function clearInfoPokemon(){
 
   const clearTypesText = document.getElementById("tiposText");
   clearTypesText.innerHTML = '';
-  const clearTypes = document.getElementById("tipos")
+  const clearTypes = document.getElementById("typesBox")
   clearTypes.innerHTML= '';
   const clearAbilitiesText = document.getElementById("habilidadText");
   clearAbilitiesText.innerHTML = '';
@@ -49,11 +50,13 @@ function clearInfoPokemon(){
   clearStatsText.innerHTML = '';
   const clearStats = document.getElementById("stats");
   clearStats.innerHTML= '';
+  
 }
 
 verifyHour();
 
 window.onkeydown = searchByEnterKeyWord;
+
 
 
 
