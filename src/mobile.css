@@ -307,7 +307,7 @@ body{
     width: 120px;
     height: 120px;
 }
-
+/*
 .typesPokemon{
   
   display: flex;
@@ -319,6 +319,13 @@ body{
   border: 1px solid gray;
   font-family: 'Shadows Into Light', cursive;
   color: white;
+}
+*/
+
+#typesBox{
+    width: 125px;
+    display: flex;
+    justify-content: space-around;
 }
 
 

@@ -160,10 +160,13 @@ function eliminatePrueba(){
   
 let a = 1;
 function eliminateDiv(){
-  let eliminate = document.getElementById("body");
+  let eliminate = document.getElementById("typesBox");
   let hola = document.getElementById("prueba1"); 
   let hola2 = document.getElementById("prueba2"); 
-  eliminate.removeChild(hola);
+  if(hola!=null){
+    eliminate.removeChild(hola);
+  }
+  
   if(hola2 != null){
     eliminate.removeChild(hola2);
   } else {
@@ -178,6 +181,7 @@ function applicateStylesToPokemonType(pokemonType) {
   let createHTMLElement = document.createElement("p");
   createHTMLElement.style.backgroundColor = pokemonType.color;
   createHTMLElement.style.display = "flex";
+  createHTMLElement.style.flexDirection = "row";
   createHTMLElement.style.width = "60px";
   createHTMLElement.style.height = "30px";
   createHTMLElement.style.justifyContent = "center";
@@ -195,9 +199,10 @@ function applicateStylesToPokemonType(pokemonType) {
 
   const pContent = document.createTextNode(pokemonType.name.toUpperCase());
   createHTMLElement.appendChild(pContent);
-  let pTag = document.getElementById("TypesBox");
+  let pTag = document.getElementById("typesBox");
+  pTag.appendChild(createHTMLElement);
+  //document.body.insertBefore(createHTMLElement, pTag);
   
-  document.body.insertBefore(createHTMLElement, pTag);
 
 }
 
