@@ -150,27 +150,21 @@ function comprobatePokemonTypes(pokemonType) {
   }
   
 }
-let contador = 0;
-function eliminatePrueba(){
-    if(contador!== 0){
-        eliminateDiv();
-    }
-    contador++;
-}
-  
-let a = 1;
-function eliminateDiv(){
+
+let countNumberOfPokemonTypes = 1;
+function eliminatePokemonTypes(){
   let eliminate = document.getElementById("typesBox");
-  let hola = document.getElementById("prueba1"); 
-  let hola2 = document.getElementById("prueba2"); 
-  if(hola!=null){
-    eliminate.removeChild(hola);
+  let typeOfPokemon1 = document.getElementById("typeOfPokemon1"); 
+  let typeOfPokemon2 = document.getElementById("typeOfPokemon2"); 
+
+  if(typeOfPokemon1 != null){
+    eliminate.removeChild(typeOfPokemon1);
   }
   
-  if(hola2 != null){
-    eliminate.removeChild(hola2);
+  if(typeOfPokemon2 != null){
+    eliminate.removeChild(typeOfPokemon2);
   } else {
-    a = 1;
+    countNumberOfPokemonTypes = 1;
   }
   
   
@@ -190,18 +184,19 @@ function applicateStylesToPokemonType(pokemonType) {
   createHTMLElement.style.border = "1px solid gray";
   createHTMLElement.style.fontFamily = "'Shadows Into Light', cursive";
   createHTMLElement.style.color = "white";
-  createHTMLElement.id = "prueba" + a;
-  a++;
-  if(a >= 3){
-    a = 1;
+  createHTMLElement.id = "typeOfPokemon" + countNumberOfPokemonTypes;
+
+  countNumberOfPokemonTypes++;
+  if(countNumberOfPokemonTypes >= 3){
+    countNumberOfPokemonTypes = 1;
   }
   
 
-  const pContent = document.createTextNode(pokemonType.name.toUpperCase());
-  createHTMLElement.appendChild(pContent);
-  let pTag = document.getElementById("typesBox");
-  pTag.appendChild(createHTMLElement);
-  //document.body.insertBefore(createHTMLElement, pTag);
+  const pTagContent = document.createTextNode(pokemonType.name.toUpperCase());
+  createHTMLElement.appendChild(pTagContent);
+  let pTagToConcatenate = document.getElementById("typesBox");
+  pTagToConcatenate.appendChild(createHTMLElement);
+  
   
 
 }

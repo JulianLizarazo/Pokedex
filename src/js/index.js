@@ -40,8 +40,7 @@ function clearInfoPokemon(){
 
   const clearTypesText = document.getElementById("tiposText");
   clearTypesText.innerHTML = '';
-  const clearTypes = document.getElementById("typesBox")
-  clearTypes.innerHTML= '';
+  eliminatePokemonTypes();
   const clearAbilitiesText = document.getElementById("habilidadText");
   clearAbilitiesText.innerHTML = '';
   const clearAbilities = document.getElementById("habilidad");
@@ -50,7 +49,7 @@ function clearInfoPokemon(){
   clearStatsText.innerHTML = '';
   const clearStats = document.getElementById("stats");
   clearStats.innerHTML= '';
-  eliminatePrueba();
+  
   
   
 }
