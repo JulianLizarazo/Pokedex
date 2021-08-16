@@ -162,6 +162,7 @@ function comprobatePokemonTypes(pokemonType) {
 }
 
 let countNumberOfPokemonTypes = 1;
+
 function eliminatePokemonTypes(){
   let eliminate = document.getElementById("typesBox");
   let typeOfPokemon1 = document.getElementById("typeOfPokemon1"); 
