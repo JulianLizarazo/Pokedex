@@ -61,7 +61,16 @@ class Pokemon {
 
   async showPokemonSprite() {
     const pokemonSprite = await this.#pokemon.getPokemonInfo();
+    const imageTagHTML = document.getElementById("image");
+    imageTagHTML.style.display = "block";
     window.image.setAttribute("src", pokemonSprite.sprites.front_default);
+  }
+
+  async showPokemonSpriteShiny() {
+    const pokemonSprite = await this.#pokemon.getPokemonInfo();
+    const imageTagHTML = document.getElementById("image");
+    imageTagHTML.style.display = "block";
+    window.image.setAttribute("src", pokemonSprite.sprites.front_shiny);
   }
 
   async showPokemonTypes() {

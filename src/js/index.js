@@ -3,23 +3,31 @@ async function searchPokemon() {
   const nameOrIdIngresed = document.getElementById("insertNameOrId").value;
   const nameOrIdIngresedInLowerCase = nameOrIdIngresed.toLowerCase();
   const pokemon = new Pokemon(nameOrIdIngresedInLowerCase);
-  /*console.log(pokemon.showPokemonName())
-  const prueba = await pokemon.showPokemonName();
-  console.log(prueba)
-  if(prueba !== 404){
-    
-  } else {
-    "Un solo error por faovr :'v"
-  }*/
+  verifyPokemonSprite(pokemon);
   correctSearch(pokemon);
-  
 }
+
+function verifyPokemonSprite(pokemon){
+  const shinyNumber1 = Math.floor(Math.random() * 50000 + 1);
+  const shinyNumber2 = Math.floor(Math.random() * 50000 + 1);
+  console.log(shinyNumber1);
+  console.log(shinyNumber2);
+  
+  
+  if(shinyNumber1 === shinyNumber2){
+    pokemon.showPokemonSpriteShiny();
+  } else {
+    pokemon.showPokemonSprite();
+  }
+}
+
+
+
 function correctSearch(pokemon) {
   pokemon.showPokemonName();
   pokemon.showPokemonId();
   pokemon.showPokemonGeneration();
   pokemon.showPokemonAbilities();
-  pokemon.showPokemonSprite();
   pokemon.showPokemonTypes();
   pokemon.showPokemonStats();
 }
@@ -56,17 +64,17 @@ function clearInfoPokemon() {
   clearTypesText.innerHTML = "";
   eliminatePokemonTypes();
   const clearNameText = document.getElementById("pokemonNameText");
-  clearNameText.innerHTML= "";
+  clearNameText.innerHTML = "";
   const clearName = document.getElementById("pokemonName");
-  clearName.innerHTML= "";
+  clearName.innerHTML = "";
   const clearIdText = document.getElementById("pokemonIdText");
-  clearIdText.innerHTML= "";
+  clearIdText.innerHTML = "";
   const clearId = document.getElementById("pokemonId");
-  clearId.innerHTML= "";
+  clearId.innerHTML = "";
   const clearGenerationText = document.getElementById("pokemonGenerationText");
-  clearGenerationText.innerHTML= "";
+  clearGenerationText.innerHTML = "";
   const clearGeneration = document.getElementById("pokemonGeneration");
-  clearGeneration.innerHTML= "";
+  clearGeneration.innerHTML = "";
   const clearAbilitiesText = document.getElementById("habilidadText");
   clearAbilitiesText.innerHTML = "";
   const clearAbilities = document.getElementById("habilidad");
@@ -77,6 +85,16 @@ function clearInfoPokemon() {
   clearStats.innerHTML = "";
 }
 
+function gameBoyScreenOff(){
+  const clearImg = document.getElementById("image");
+  clearImg.style.display = "none";
+}
+
 verifyHour();
 
 window.onkeydown = searchByEnterKeyWord;
+
+gameBoyScreenOff();
+
+
+

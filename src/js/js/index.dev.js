@@ -10,18 +10,10 @@ function searchPokemon() {
           nameOrIdIngresed = document.getElementById("insertNameOrId").value;
           nameOrIdIngresedInLowerCase = nameOrIdIngresed.toLowerCase();
           pokemon = new Pokemon(nameOrIdIngresedInLowerCase);
-          /*console.log(pokemon.showPokemonName())
-          const prueba = await pokemon.showPokemonName();
-          console.log(prueba)
-          if(prueba !== 404){
-            
-          } else {
-            "Un solo error por faovr :'v"
-          }*/
-
+          verifyPokemonSprite(pokemon);
           correctSearch(pokemon);
 
-        case 5:
+        case 6:
         case "end":
           return _context.stop();
       }
@@ -29,12 +21,24 @@ function searchPokemon() {
   });
 }
 
+function verifyPokemonSprite(pokemon) {
+  var shinyNumber1 = Math.floor(Math.random() * 50000 + 1);
+  var shinyNumber2 = Math.floor(Math.random() * 50000 + 1);
+  console.log(shinyNumber1);
+  console.log(shinyNumber2);
+
+  if (shinyNumber1 === shinyNumber2) {
+    pokemon.showPokemonSpriteShiny();
+  } else {
+    pokemon.showPokemonSprite();
+  }
+}
+
 function correctSearch(pokemon) {
   pokemon.showPokemonName();
   pokemon.showPokemonId();
   pokemon.showPokemonGeneration();
   pokemon.showPokemonAbilities();
-  pokemon.showPokemonSprite();
   pokemon.showPokemonTypes();
   pokemon.showPokemonStats();
 }
@@ -85,5 +89,11 @@ function clearInfoPokemon() {
   clearStats.innerHTML = "";
 }
 
+function gameBoyScreenOff() {
+  var clearImg = document.getElementById("image");
+  clearImg.style.display = "none";
+}
+
 verifyHour();
 window.onkeydown = searchByEnterKeyWord;
+gameBoyScreenOff();

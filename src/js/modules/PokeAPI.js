@@ -13,7 +13,6 @@ class PokeAPI {
 
       return parsePokemonData;
     } else {
-      console.log("estoy en el else");
       this.#missigno();
     }
   }
