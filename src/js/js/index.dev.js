@@ -47,6 +47,7 @@ function clearInfoPokemon() {
   clearStatsText.innerHTML = '';
   var clearStats = document.getElementById("stats");
   clearStats.innerHTML = '';
+  eliminatePrueba();
 }
 
 verifyHour();

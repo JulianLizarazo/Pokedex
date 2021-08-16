@@ -76,78 +76,105 @@ var flying = {
 function comprobatePokemonTypes(pokemonType) {
   console.log(pokemonType);
 
-  switch (pokemonType) {
-    case fire.name:
-      applicateStylesToPokemonType(fire);
-      break;
+  for (var i = 0; i < pokemonType.length; i++) {
+    switch (pokemonType[i].type.name) {
+      case fire.name:
+        applicateStylesToPokemonType(fire);
+        break;
 
-    case water.name:
-      applicateStylesToPokemonType(water);
-      break;
+      case water.name:
+        applicateStylesToPokemonType(water);
+        break;
 
-    case grass.name:
-      applicateStylesToPokemonType(grass);
-      break;
+      case grass.name:
+        applicateStylesToPokemonType(grass);
+        break;
 
-    case steel.name:
-      applicateStylesToPokemonType(steel);
-      break;
+      case steel.name:
+        applicateStylesToPokemonType(steel);
+        break;
 
-    case bug.name:
-      applicateStylesToPokemonType(bug);
-      break;
+      case bug.name:
+        applicateStylesToPokemonType(bug);
+        break;
 
-    case dragon.name:
-      applicateStylesToPokemonType(dragon);
-      break;
+      case dragon.name:
+        applicateStylesToPokemonType(dragon);
+        break;
 
-    case electric.name:
-      applicateStylesToPokemonType(electric);
-      break;
+      case electric.name:
+        applicateStylesToPokemonType(electric);
+        break;
 
-    case ghost.name:
-      applicateStylesToPokemonType(ghost);
-      break;
+      case ghost.name:
+        applicateStylesToPokemonType(ghost);
+        break;
 
-    case fairy.name:
-      applicateStylesToPokemonType(fairy);
-      break;
+      case fairy.name:
+        applicateStylesToPokemonType(fairy);
+        break;
 
-    case ice.name:
-      applicateStylesToPokemonType(ice);
-      break;
+      case ice.name:
+        applicateStylesToPokemonType(ice);
+        break;
 
-    case fighting.name:
-      applicateStylesToPokemonType(fighting);
-      break;
+      case fighting.name:
+        applicateStylesToPokemonType(fighting);
+        break;
 
-    case normal.name:
-      applicateStylesToPokemonType(normal);
-      break;
+      case normal.name:
+        applicateStylesToPokemonType(normal);
+        break;
 
-    case psychic.name:
-      applicateStylesToPokemonType(psychic);
-      break;
+      case psychic.name:
+        applicateStylesToPokemonType(psychic);
+        break;
 
-    case rock.name:
-      applicateStylesToPokemonType(rock);
-      break;
+      case rock.name:
+        applicateStylesToPokemonType(rock);
+        break;
 
-    case dark.name:
-      applicateStylesToPokemonType(dark);
-      break;
+      case dark.name:
+        applicateStylesToPokemonType(dark);
+        break;
 
-    case ground.name:
-      applicateStylesToPokemonType(ground);
-      break;
+      case ground.name:
+        applicateStylesToPokemonType(ground);
+        break;
 
-    case poison.name:
-      applicateStylesToPokemonType(poison);
-      break;
+      case poison.name:
+        applicateStylesToPokemonType(poison);
+        break;
 
-    case flying.name:
-      applicateStylesToPokemonType(flying);
-      break;
+      case flying.name:
+        applicateStylesToPokemonType(flying);
+        break;
+    }
+  }
+}
+
+var contador = 0;
+
+function eliminatePrueba() {
+  if (contador !== 0) {
+    eliminateDiv();
+  }
+
+  contador++;
+}
+
+var a = 1;
+
+function eliminateDiv() {
+  var eliminate = document.getElementById("body");
+  var hola = document.getElementById("prueba1");
+  var hola2 = document.getElementById("prueba2");
+  eliminate.removeChild(hola);
+
+  if (hola2 != null) {
+    eliminate.removeChild(hola2);
+  } else {
+    a = 1;
   }
 }
 
@@ -163,9 +190,15 @@ function applicateStylesToPokemonType(pokemonType) {
   createHTMLElement.style.border = "1px solid gray";
   createHTMLElement.style.fontFamily = "'Shadows Into Light', cursive";
   createHTMLElement.style.color = "white";
-  createHTMLElement.id = "prueba";
+  createHTMLElement.id = "prueba" + a;
+  a++;
+
+  if (a >= 3) {
+    a = 1;
+  }
+
   var pContent = document.createTextNode(pokemonType.name.toUpperCase());
   createHTMLElement.appendChild(pContent);
-  var pTag = document.getElementById("typesBox");
-  document.body.appendChild(createHTMLElement, pTag);
+  var pTag = document.getElementById("TypesBox");
+  document.body.insertBefore(createHTMLElement, pTag);
 }

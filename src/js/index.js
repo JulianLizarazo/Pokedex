@@ -50,6 +50,8 @@ function clearInfoPokemon(){
   clearStatsText.innerHTML = '';
   const clearStats = document.getElementById("stats");
   clearStats.innerHTML= '';
+  eliminatePrueba();
+  
   
 }
 
