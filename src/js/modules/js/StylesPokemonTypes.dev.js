@@ -171,6 +171,8 @@ function eliminatePokemonTypes() {
   }
 }
 
+var pokemonInfoFontFamily = "'Shadows Into Light', cursive";
+
 function applicateStylesToPokemonType(pokemonType) {
   var createHTMLElement = document.createElement("p");
   createHTMLElement.style.backgroundColor = pokemonType.color;
@@ -182,7 +184,7 @@ function applicateStylesToPokemonType(pokemonType) {
   createHTMLElement.style.alignItems = "center";
   createHTMLElement.style.borderRadius = "10px";
   createHTMLElement.style.border = "1px solid gray";
-  createHTMLElement.style.fontFamily = "'Shadows Into Light', cursive";
+  createHTMLElement.style.fontFamily = pokemonInfoFontFamily;
   createHTMLElement.style.color = "white";
   createHTMLElement.id = "typeOfPokemon" + countNumberOfPokemonTypes;
   countNumberOfPokemonTypes++;

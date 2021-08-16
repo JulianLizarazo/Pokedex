@@ -169,7 +169,7 @@ function eliminatePokemonTypes(){
   
   
 }
-
+const pokemonInfoFontFamily = "'Shadows Into Light', cursive";
 function applicateStylesToPokemonType(pokemonType) {
   
   let createHTMLElement = document.createElement("p");
@@ -182,7 +182,8 @@ function applicateStylesToPokemonType(pokemonType) {
   createHTMLElement.style.alignItems = "center";
   createHTMLElement.style.borderRadius = "10px";
   createHTMLElement.style.border = "1px solid gray";
-  createHTMLElement.style.fontFamily = "'Shadows Into Light', cursive";
+  createHTMLElement.style.fontFamily = pokemonInfoFontFamily;
+
   createHTMLElement.style.color = "white";
   createHTMLElement.id = "typeOfPokemon" + countNumberOfPokemonTypes;
 
