@@ -67,14 +67,8 @@ class Pokemon {
   async showPokemonTypes() {
     const pokemonTypes = await this.#pokemon.getPokemonInfo();
     const typesText = document.getElementById("tiposText");
-    let types = document.getElementById("tipos");
     typesText.innerText = "Types: "
     comprobatePokemonTypes(pokemonTypes.types)
-    /*pokemonTypes.types.forEach(
-      (pokemonType) => {
-        document.body.onload = comprobatePokemonTypes(pokemonType.type.name);
-      }(types.innerText += pokemonType.type.name + "/")
-    );*/
   }
 
   async showPokemonAbilities() {

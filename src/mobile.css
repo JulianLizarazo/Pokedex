@@ -307,23 +307,9 @@ body{
     width: 120px;
     height: 120px;
 }
-/*
-.typesPokemon{
-  
-  display: flex;
-  width: 60px;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  border: 1px solid gray;
-  font-family: 'Shadows Into Light', cursive;
-  color: white;
-}
-*/
 
 #typesBox{
-    width: 125px;
+    width: 170px;
     display: flex;
     justify-content: space-around;
 }

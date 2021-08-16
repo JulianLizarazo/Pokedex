@@ -88,8 +88,18 @@ const flying = {
   color: "#6993d9",
 };
 
+function applicatePositionToAUniqueType(pokemonType){
+  if(pokemonType.length == 1){
+    const prueba = document.getElementById("typesBox");
+    prueba.style.justifyContent = "flex-end";
+  }
+}
+
 function comprobatePokemonTypes(pokemonType) {
   console.log(pokemonType);
+
+  applicatePositionToAUniqueType(pokemonType);
+  
   for(let i = 0; i<pokemonType.length; i++){
     switch (pokemonType[i].type.name) {
       case fire.name:
@@ -169,15 +179,17 @@ function eliminatePokemonTypes(){
   
   
 }
+
 const pokemonInfoFontFamily = "'Shadows Into Light', cursive";
+
 function applicateStylesToPokemonType(pokemonType) {
   
   let createHTMLElement = document.createElement("p");
   createHTMLElement.style.backgroundColor = pokemonType.color;
   createHTMLElement.style.display = "flex";
   createHTMLElement.style.flexDirection = "row";
-  createHTMLElement.style.width = "60px";
-  createHTMLElement.style.height = "30px";
+  createHTMLElement.style.width = "80px";
+  createHTMLElement.style.height = "35px";
   createHTMLElement.style.justifyContent = "center";
   createHTMLElement.style.alignItems = "center";
   createHTMLElement.style.borderRadius = "10px";
