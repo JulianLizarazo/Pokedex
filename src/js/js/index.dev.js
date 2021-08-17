@@ -34,6 +34,25 @@ function verifyPokemonSprite(pokemon) {
   }
 }
 
+function pokemonRandom() {
+  clearInfoPokemon();
+  var buttonRandom = document.getElementById("pokemonRandom");
+  buttonRandom.style.display = "none";
+  var idPokemonRandom = 0;
+  var bruxishId = 779;
+  var probabilityOfBruxish = Math.floor(Math.random() * 100 + 1);
+
+  if (probabilityOfBruxish <= 40) {
+    idPokemonRandom = bruxishId;
+  } else {
+    idPokemonRandom = Math.floor(Math.random() * 893 + 1);
+  }
+
+  var pokemonRandom = new Pokemon(idPokemonRandom);
+  verifyPokemonSprite(pokemonRandom);
+  correctSearch(pokemonRandom);
+}
+
 function correctSearch(pokemon) {
   pokemon.showPokemonName();
   pokemon.showPokemonId();

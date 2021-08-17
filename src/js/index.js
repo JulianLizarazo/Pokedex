@@ -7,21 +7,37 @@ async function searchPokemon() {
   correctSearch(pokemon);
 }
 
-function verifyPokemonSprite(pokemon){
+function verifyPokemonSprite(pokemon) {
   const shinyNumber1 = Math.floor(Math.random() * 1000 + 1);
   const shinyNumber2 = Math.floor(Math.random() * 1000 + 1);
   console.log(shinyNumber1);
   console.log(shinyNumber2);
-  
-  
-  if(shinyNumber1 === shinyNumber2){
+
+  if (shinyNumber1 === shinyNumber2) {
     pokemon.showPokemonSpriteShiny();
   } else {
     pokemon.showPokemonSprite();
   }
 }
 
+function pokemonRandom() {
+  clearInfoPokemon();
+  const buttonRandom = document.getElementById("pokemonRandom");
+  buttonRandom.style.display = "none";
+  let idPokemonRandom = 0;
+  const bruxishId = 779;
+  const probabilityOfBruxish = Math.floor(Math.random() * 100 + 1);
 
+  if (probabilityOfBruxish <= 40) {
+    idPokemonRandom = bruxishId;
+  } else {
+    idPokemonRandom = Math.floor(Math.random() * 893 + 1);
+  }
+
+  const pokemonRandom = new Pokemon(idPokemonRandom);
+  verifyPokemonSprite(pokemonRandom);
+  correctSearch(pokemonRandom);
+}
 
 function correctSearch(pokemon) {
   pokemon.showPokemonName();
@@ -85,7 +101,7 @@ function clearInfoPokemon() {
   clearStats.innerHTML = "";
 }
 
-function gameBoyScreenOff(){
+function gameBoyScreenOff() {
   const clearImg = document.getElementById("image");
   clearImg.style.display = "none";
 }
@@ -95,6 +111,3 @@ verifyHour();
 window.onkeydown = searchByEnterKeyWord;
 
 gameBoyScreenOff();
-
-
-
