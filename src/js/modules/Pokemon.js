@@ -64,6 +64,8 @@ class Pokemon {
     const imageTagHTML = document.getElementById("image");
     imageTagHTML.style.display = "block";
     window.image.setAttribute("src", pokemonSprite.sprites.front_default);
+    const shinyText = document.getElementById("easterEgg");
+    shinyText.style.display = "none";
   }
 
   async showPokemonSpriteShiny() {
@@ -71,6 +73,8 @@ class Pokemon {
     const imageTagHTML = document.getElementById("image");
     imageTagHTML.style.display = "block";
     window.image.setAttribute("src", pokemonSprite.sprites.front_shiny);
+    const shinyText = document.getElementById("easterEgg");
+    shinyText.style.display = "block";
   }
 
   async showPokemonTypes() {

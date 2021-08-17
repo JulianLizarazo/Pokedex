@@ -22,8 +22,8 @@ function searchPokemon() {
 }
 
 function verifyPokemonSprite(pokemon) {
-  var shinyNumber1 = Math.floor(Math.random() * 50000 + 1);
-  var shinyNumber2 = Math.floor(Math.random() * 50000 + 1);
+  var shinyNumber1 = Math.floor(Math.random() * 1000 + 1);
+  var shinyNumber2 = Math.floor(Math.random() * 1000 + 1);
   console.log(shinyNumber1);
   console.log(shinyNumber2);
 

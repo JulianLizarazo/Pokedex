@@ -308,6 +308,17 @@ body{
     height: 120px;
 }
 
+#easterEgg{
+    width: 100px;
+    height: 15px;
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    color: white;
+    display: none;
+    
+}
+
 #typesBox{
     width: 170px;
     display: flex;
