@@ -25,7 +25,7 @@ class PokeAPI {
 
     const showMissignoText = document.getElementById("pokemonNameText");
     const missignoError =
-      "Te salió Missigno! Eso significa, que ingresaste el nombre del pokemon mal o ingresaste un numero de ID incorrecto :(. Verifica que el nombre del pokemon esté bien escrito, o que el ID esté entre 1 y 893!";
+      "Missingno came out! That means you either entered the wrong Pokémon name or entered the wrong pokemon ID number :(. Check that the Pokémon name is spelled correctly or the ID is between 1 and 893!";
     showMissignoText.innerHTML = missignoError;
   }
 
