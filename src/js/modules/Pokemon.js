@@ -1,4 +1,4 @@
-//import PokeAPI from "./PokeAPI.js";
+/*this class shows the info of the pokemon obtained of the pokeAPI previously*/ 
 
 class Pokemon {
   #pokemon;

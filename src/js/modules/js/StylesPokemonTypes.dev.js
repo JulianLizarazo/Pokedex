@@ -1,5 +1,7 @@
 "use strict";
 
+/*the pokeAPI has the types of pokemon in text format, so this file apply styles to that types and shows
+them*/
 var fire = {
   name: "fire",
   color: "#c04830"

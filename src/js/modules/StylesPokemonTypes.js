@@ -1,3 +1,6 @@
+/*the pokeAPI has the types of pokemon in text format, so this file apply styles to that types and shows
+them*/
+
 const fire = {
   name: "fire",
   color: "#c04830",

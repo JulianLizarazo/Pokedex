@@ -1,3 +1,5 @@
+/* this class calls the pokemon api to get the data about the pokemon*/
+
 class PokeAPI {
   #url;
 
@@ -16,7 +18,7 @@ class PokeAPI {
       this.#missigno();
     }
   }
-
+  //this function works like "404 not found" but in pokemon.
   #missigno() {
     clearInfoPokemon();
     console.log("estoy mostrando a missigno");
